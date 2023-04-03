@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Pacifico;
+  src: url(../fonts/Pacifico-Regular.ttf);
+}
+
+/* Customize scrollbar */
+*::-webkit-scrollbar {
+  width: 4px !important;
+  height: 8px !important;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: silver;
+  border-radius: 8px;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+main {
+  background-color: #111927;
+  background-image: radial-gradient(
+      at 47% 33%,
+      hsl(303.07, 100%, 57.99999999999999%) 0,
+      transparent 59%
+    ),
+    radial-gradient(at 82% 65%, hsl(218, 39%, 11%) 0, transparent 55%);
+}
+
+.title {
+  font-family: Pacifico;
+  color: #f6eb9d;
+  text-shadow: 0px 10px 50px #ffc700;
+}
+
+.card {
+  animation: floating 3s infinite ease-in-out;
+  box-sizing: border-box;
+  background: linear-gradient(
+    107.93deg,
+    rgba(217, 217, 217, 0.651) 1.51%,
+    rgba(217, 217, 217, 0) 100%
+  );
+  box-shadow: 0 4px 24px -1px #00000040;
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.card:hover {
+  animation: none;
+}
